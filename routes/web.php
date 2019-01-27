@@ -12,5 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
+});
+
+Route::group(['prefix' => 'events'], function () {
+  Route::get('view', function () {
+      return view('index');
+  });
 });
