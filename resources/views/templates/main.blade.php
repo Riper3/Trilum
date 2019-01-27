@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/main.css') }}">
     <title>Trilum | @yield('title', 'Trilum')</title>
     <script src="{{ asset('js/jquery.js') }}"></script>
     <script src="{{ asset('bootstrap/js/bootstrap.js') }}"></script>
@@ -18,26 +19,26 @@
           <li class="nav-item active">
             <a class="nav-link" href="/">Inicio<span class="sr-only">(current)</span></a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Features</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Pricing</a>
-          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Dropdown link
+              Actividades
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
+              <a class="dropdown-item" href="/events/all/culturales">Culturales</a>
+              <a class="dropdown-item" href="/events/all/deportivas">Deportivas</a>
+              <a class="dropdown-item" href="/events/all/cenas">Cenas</a>
             </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Viajes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Gente</a>
           </li>
         </ul>
       </div>
     </nav>
-    <div class="container-fluid bg-warning">
+    <div class="container-fluid bg-warning main-div">
       @yield('content')
     </div>
   </body>

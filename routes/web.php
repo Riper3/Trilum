@@ -19,4 +19,10 @@ Route::group(['prefix' => 'events'], function () {
   Route::get('view', function () {
       return view('index');
   });
+  Route::get('all/{category}', function () {
+      return view('events/all');
+  });
+  Route::get('new', function () {
+      return view('events/new');
+  });
 });
