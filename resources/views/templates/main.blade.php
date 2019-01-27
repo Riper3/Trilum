@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.css') }}">
     <title>Trilum | @yield('title', 'Trilum')</title>
+    <script src="{{ asset('js/jquery.js') }}"></script>
     <script src="{{ asset('bootstrap/js/bootstrap.js') }}"></script>
   </head>
   <body>
