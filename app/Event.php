@@ -8,5 +8,5 @@ class Event extends Model
 {
     protected $table = "events";
 
-    protected $fileable = ['name', 'categoryId', 'imageId', 'date', 'hour', 'location', 'assistants', 'vacancies'];
+    protected $fileable = ['eventname', 'categoryId', 'imageId', 'date', 'hour', 'location', 'assistants', 'vacancies'];
 }
