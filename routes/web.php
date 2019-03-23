@@ -15,7 +15,11 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::group(['prefix' => 'events'], function () {
+Route::get('newuser', function () {
+    return view('users/register');
+});
+
+Route::group(['prefix' => 'users'], function () {
   Route::get('register', function () {
       return view('users/register');
   });
@@ -39,3 +43,5 @@ Route::group(['prefix' => 'events'], function () {
       return view('events/edit');
   });
 });
+
+Auth::routes();
