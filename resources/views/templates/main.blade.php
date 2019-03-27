@@ -36,6 +36,34 @@
             <a class="nav-link" href="#">Gente</a>
           </li>
         </ul>
+          <div class="navbar-collapse collapse">
+            <ul class="navbar-nav ml-auto">
+                @if (Auth::check())
+                  <li class="nav-item avatar">
+                    <a class="nav-link" href="{{ route('logout') }}"
+                    onclick="event.preventDefault();
+                    document.getElementById('logout-form').submit();">
+                    Logout
+                    </a>
+                 </li>
+
+                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                 </form>
+                @else
+                 <li class="nav-item">
+                   <a class="nav-link" href="/newuser">
+                     Register
+                   </a>
+                 </li>
+                 <li class="nav-item">
+                   <a class="nav-link" href="/loguser">
+                     Log in
+                   </a>
+                 </li>
+                @endif
+            </ul>
+          </div>
       </div>
     </nav>
     <div class="container-fluid bg-warning main-div">
